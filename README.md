@@ -28,5 +28,9 @@
     <p>
     	Alguém poderia ajudar ?
     </p>
+    <p>
+    	<h3>Observações:</h3>
+    	Já tentei converter com<pre>iconv -f us-ascii -t utf-8</pre> sem resultado;
+    </p>
 </body>
 </html>
