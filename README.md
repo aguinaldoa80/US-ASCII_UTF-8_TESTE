@@ -6,67 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        # US-ASCII_UTF-8_TESTE
+        <h1><center>Dívida em codificação de arquivo utf8 & us-ascii</center></h1>
     <center>![A3ATecnologia Logo](https://s17.postimg.org/p6xh4o6vj/logo300.png)</center>
-    <h2><center>Project A3A Tecnologia</center></h2>
-    <br>
-    <h3>Objetivos:</h3>
-    <ul>
-        <li>Cadastrar alunos, veículos, instrutores, horários, categoria de habilitação;</li>
-        <li><strong>Controlar agenda de aulas direção</strong>;</li>
-        <li>Gerenciar exames feitos nas bancas de legislação e direção.</li>
-    </ul>
-    <br>
-    <h3>Após baixar o projeto, executar no terminal na raiz do projeto</h3>
-    Instalar as bibliotecas utilizadas
-    <pre>composer install ou composer update</pre>
-    Criar um database no mysql com o nome a3atecnologia em seguida no terminal na raiz do projeto
-    <br>
-    Após composer install para funcionar o mail auto embed siga as insturções do github
-    <pre>
-	https://github.com/eduardokum/laravel-mail-auto-embed
-	$providers = [
-	    ...
-	    \Eduardokum\LaravelMailAutoEmbed\ServiceProvider::class,
-	    ...
-	 ];
-	 php artisan vendor:publish --provider="Eduardokum\LaravelMailAutoEmbed\ServiceProvider"
-	 </pre>
-    Migrar todo o schema do database para o mysql
-    <pre>php artisan migrate</pre>
-    <h3>Inserir todos os dados pré estabelecidos nas tables</h3>
-    <pre>
-php artisan db:seed</pre>
-    <h3>Para inserir uma única classe ou table de Seeds;</h3>
-    <pre>php artisan db:seed --class=UserTableSeeder</pre>
-    <br>
-    <strong>Não é necessário configurar apache, faça um kill apache2 na porta 80 se quiser usar ela</strong>
-    <h3 style="color: #000">Failed to decode response: zlib_decode(): data error => executar no terminal</h3>
-    <pre>composer clear-cache</pre>
-    <br>
-    <h3>Documentação Laravel</h3>
-    <a href = "https://laravel.com/docs/5.6/">Documentação</a>
-    <br>
-    <h3>Comandos principais git</h3>
-    Criar nova branch -> facilita seu proprio versionamento local, é como se você tivesse duas versões uma pra teste e outra pra envio ao master, onde teste é o seu novo branch;
-    <pre>git checkout -b teste</pre>
-    Visualizar qual branch esta ativo no estado atual;
-    <pre>git branch</pre>
-    Mudar de um branch para outro;
-    <pre>git checkout master</pre>
-    <pre>git checkout teste</pre>
-    Submeter mudanças do branch teste ao master
-    <pre>
-    git checkout teste
-	git add .
-	git commit -m "Alteração referente a ..."
-	git checkout master
-	git merge teste
-	git push origin master
-    </pre>
-    Depois que enviar não se esqueça de voltar ao branch de testes
-    <pre>git checkout teste</pre>
-    <br>
-
+    <h3>Problema:</h3>
+    <p>
+    Estou editando um projeto web/php, porém os arquivos que vieram a mim estão em utf-8, se fizer 
+    o comando <pre>file -i file.php</pre> no terminal do linux ele retorna que o arquivo original
+    sem alterações está em charset=utf-8, quando eu abro ele na minha maquina e salvo novamente,
+    forçando o netbeans ou sublime para salvar na codificação utf-8 ele salva, se abro novamente, os dois falam que esta em utf-8, porem quando se faz no terminal <pre>file -i file.php</pre> ele retorna que o arquivo esta em <strong>us-ascii</strong>, isto esta dificultando o desenvolvimento, porque o professor mentor do projeto, precisa verificar e confirmar as inserções
+     e ou alterações feitas por mim antes de aceita-las na branch master, quando ele abre na máquina dele, a codificação do arquivo fica uma bagunça como a imagem abaixo <br>
+     <center>![Erro utf-8](https://s9.postimg.cc/9x2yxccbj/e9b91967-d2b5-49ff-b8b4-aae19493e812.jpg)</center><br>, impossibilitando a leitura, já na minha máquina abre normal, alguém sabe como resolver essa situação ?
+    </p>
+    <h3>Minha máquina: </h3>
+    <p>
+    	-GNU/Linux Debian 9 streach x64b.<br>
+    	-Idioma teclado: Portugues(Brasil)
+    </p>
+    <p>
+    	O arquivo para testes é o cadastrarvotante.php<br>
+    	quem puder baixar ele e ver se a coficiação está errada agradeço.
+    </p>
+    <p>
+    	Alguém poderia ajudar ?
+    </p>
 </body>
 </html>
